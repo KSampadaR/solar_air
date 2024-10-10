@@ -4,11 +4,7 @@ from sklearn.cluster import KMeans
 # This script would perform analysis on historical weather data to identify patterns
 
 def analyze_weather_patterns(weather_data):
-    """
-    Analyzes weather patterns using clustering.
-    :param weather_data: DataFrame with historical weather data
-    :return: Clustering results
-    """
+    
     # Assuming weather_data is a DataFrame with relevant weather metrics
     kmeans = KMeans(n_clusters=5)  # Example: 5 clusters for different weather patterns
     weather_data['cluster'] = kmeans.fit_predict(weather_data)
